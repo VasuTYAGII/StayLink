@@ -1,0 +1,177 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+
+
+/* nav info */
+.navbar{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    background-color: white !important;
+}
+
+.fa-staylinked{
+    color:#fe424d;
+    font-size: 2.5rem;
+}
+.brandLogo{
+    text-decoration: none !important;
+}
+.staylinked{
+    color: rgb(254, 66, 77);
+    font-weight: 800;
+    font-size: 1.45rem;
+    text-decoration: none;
+}
+
+.nav-link{
+    font-size: 1.25rem !important;
+    color: black !important;
+}
+
+.search-btn{
+    color: white !important;
+    background-color: #fe424d !important;
+    width: 9rem !important;
+    height: 2.5rem !important;
+    border-radius: 2rem !important;
+    opacity: 0.8;
+}
+.search-btn:hover{
+    opacity: 1;
+}
+.search-bar{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-decoration: none;
+    background-color: #F8F9fA !important;
+}
+.search-option{
+    padding:0rem 1rem ;
+    border: 1px solid black;
+    height: 3.5rem;
+    align-content: center;
+    border-radius: 2rem;
+}
+
+
+.filters{
+    display: flex;
+    align-items: center;
+}
+.filter{
+    text-align: center;
+    margin-right:1.2rem;
+    opacity: 0.7;
+    cursor: pointer;
+    font-size: small;
+}
+.filter:hover{
+    opacity: 1;
+}
+.filter-title
+{
+    font-size: small;
+}
+
+.tax-info{
+    display: none;
+}
+.tax-toggle{
+    font-size: 1rem;
+    border: 0.5px solid rgb(211, 211, 211);
+    border-radius: 0.75rem;
+    padding: 0.75rem 0.4rem;
+    margin-left:auto
+}
+
+/* footer info */
+.icon , .pp{
+    text-decoration:none;
+    color:black;
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+.icon:hover , .pp:hover{
+    opacity: 1;
+}
+
+.footer{
+    flex-direction:column;
+    align-items: center;
+    text-align: center; 
+    background-color: rgb(211, 211, 211);   
+}
+
+/* common heading */
+.common-heading{
+    color: #fe424d;
+    font-weight: 700;
+}
+
+
+/* card */
+.listingcard{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.showcard{
+    text-decoration: none !important;
+}
+.card-img-top{
+    width: 100%;
+    border-radius: 1rem !important;
+}
+.card-img-top:hover{
+    opacity: 0.8;
+}
+.card-body{
+    padding: 0 !important;
+}
+
+/* new place info */
+.mybtn{
+    background-color: #fe424d !important;
+    color: black !important;
+    border: none !important;
+    width: 25vw;
+    opacity:0.8 !important;
+    font-weight: 800 !important;
+}
+.deletebtn{
+    background-color: black !important;
+    color: white !important;
+}
+.mybtn:hover{
+    opacity: 1 !important;
+}
+
+/* //show info */
+.showhead{
+    color: #fe424d;
+    text-align: center;
+    font-weight: 800;
+}
+.showbtn{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* review */
+.review-del-btn{
+    font-weight: 800 !important;
+}
