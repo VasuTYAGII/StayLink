@@ -1,6 +1,6 @@
 const express = require("express");
 const router=express.Router({mergeParams : true});
-const AsyncWrap=require('../utilities/asyncWrap.js');
+const AsyncWrap=require('../utilities/AsyncWrap.js');
 const {isLoggedin,validatereview,isReviewAuthor}=require("../middleware.js");
 const reviewController=require("../controllers/review.js");
 
