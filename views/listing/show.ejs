@@ -79,12 +79,9 @@
         { %>
             <div class="review-card card col-5 ms-3 mb-3">
                 <div class="card-body">
-
-                  <h5 class="card-title"><b>@<%= review.author.username %></b></h5>
-                  <p class="starability-result" data-rating="<%= review.rating %>"> </p>   
-                  <p class="starability-result-written"><%= review.rating %> <b>Stars</b></p>        
                   <h5 class="card-title"><b><i class="fa-solid fa-user"></i> <%= review.author.username %></b></h5>
                   <p class="starability-result" data-rating="<%= review.rating %>"> </p>                 
+                  <p class="starability-result-written"><%= review.rating %> <b>Stars</b></p>      
                   <p class="card-text"> <b>Comment : </b><%= review.comment %> </p>
                 </div>
              <form method="POST" action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
