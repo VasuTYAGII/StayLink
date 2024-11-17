@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staylink - Accommodation Booking</title>
+    <link rel="shortcut icon" href="/favicon/StayLink_Favicon-removebg-preview copy.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/homeStyle.css">
+</head>
+<body>
+    <!-- Left Sidebar with logo and navigation -->
+    <div class="sidebar">
+        <div class="logo">
+             
+            <img src=<%= "/logo/StayLinkLogo.png" %>><h1>StayLink</h1>
+        </div>
+        <p class="tagline">Your trusted accommodation booking platform </p> 
+        <ul class="nav-links">
+            <li><a href="/listings">Explore</a></li>
+            <li><a href="/listings/new">Link your Home</a></li>
+            <% if(!currentUser) { %>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+            <% } %>
+            <% if(currentUser) { %>
+            <li><a href="/logout">Logout</a></li>
+            <% } %>
+        </ul>
+    </div>
+
+    <!-- Right Content Area -->
+    <div class="content-area">
+        <header>
+            <p>Welcome to the original website of StayLink</p>
+        </header>
+
+        <!-- About Section -->
+        <div class="info-section info-section1">
+           <h2 style="color: #2f6500;">About StayLink </h2>
+            <span style="font-weight: 500;"><b>Staylink is a leading platform connecting travelers to comfortable and reliable accommodation worldwide. With a wide range of options from luxury homes to affordable apartments, we cater to every type of traveler.</b> </span>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="info-section info-section2">
+            <h2 style="color: #2f6500;">Contact Us</h2>
+            <div class="contact"><div><b>email:&nbsp;</b><i>staylink@gmail.com</i></div><div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b>Phone:</b>&nbsp;<i>036-88267866</i></div></div>
+            <div class="contact"><b>Head Office:</b>&nbsp;Plot No. A-12, Tower 2, IT Park, Sector 62, Noida, Uttar Pradesh, 201309.</div>
+            <div class="contact"><b>Branch Office:</b>&nbsp;5th Floor, Skyline Tower, MG Road, Bengaluru, Karnataka, 560001.</div>   
+        </div>
+    </div>
+</body>
+</html>

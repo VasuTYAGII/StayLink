@@ -84,9 +84,9 @@ app.listen(8080 , ()=>{
     console.log("Listening to port 8080");
 });
 
-// app.get("/",(req,res)=>{
-//     res.send("hello");
-// });
+app.get("/",(req,res)=>{
+    res.render("./listing/home.ejs");
+});
 
 
 // app.get("/newuser",async(req,res)=>{

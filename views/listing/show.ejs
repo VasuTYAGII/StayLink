@@ -5,7 +5,7 @@
     <div class="card listingcard "  >
         <h2 class="showhead mt-5"><%= listing.title %></h2>
         <div class="col-10 offset-1">
-        <img src="<%= listing.image.url %>" class="card-img mt-3" alt="Listing_Image" height="300rem" width="100vw"></div>
+        <img src="<%= listing.image.url %>" class="show-page-img card-img mt-3" alt="Listing_Image" height="300rem" width="100vw"></div>
         <div class="card-body">
             <br><hr> 
             <h3>Hosted By : <b><%= listing.owner.username %></b></h3>
@@ -19,15 +19,15 @@
       </div>
      <div class="showbtn">
     <form method="get" action="/listings">
-        <button class="btn btn-dark mybtn mt-3"><i class="fa-solid fa-left-long"></i>&nbsp;&nbsp; Go Back </button>
+        <button class="back-btn btn btn-dark mybtn mt-3"><i class="fa-solid fa-left-long"></i><span>&nbsp;&nbsp;Go Back</span> </button>
     </form>
     <% if(currentUser && listing.owner._id.equals(currentUser._id)){ %>
     <form method="get" action="/listings/<%= listing._id %>/edit">
-        <button class="btn btn-dark mybtn mt-3"><i class="fa-solid fa-pen"></i>&nbsp;&nbsp; Edit This Listing</button>
+        <button class="edit-listing-btn btn btn-dark mybtn mt-3"><i class="fa-solid fa-pen"></i><span>&nbsp;&nbsp;Edit Details</span></button>
     </form>
 
     <form method="post" action="/listings/<%= listing._id %>?_method=DELETE">
-        <button class="btn btn-dark mybtn mt-3 deletebtn"><i class="fa-solid fa-trash"></i>&nbsp;&nbsp;   Delete this Listing</button>
+        <button class="del-listing-btn btn btn-dark mybtn mt-3 deletebtn"><i class="fa-solid fa-trash"></i><span>&nbsp;&nbsp;Remove your Home</span></button>
     </form>
     <% } %>
     </div>
@@ -65,7 +65,7 @@
                 Valid
             </div>
             </div>
-            <button class="btn btn-dark mybtn mb-3">Add Review</button>
+            <button class="addreview-btn btn btn-dark mybtn mb-3"><i class="fa-solid fa-circle-plus"></i><span>&nbsp;Add Review</span></button>
         </form>
     </div>
     <hr>
@@ -77,14 +77,18 @@
        <div class="row">
         <% for(review of listing.reviews)
         { %>
-            <div class="card col-5 ms-3 mb-3">
+            <div class="review-card card col-5 ms-3 mb-3">
                 <div class="card-body">
+
                   <h5 class="card-title"><b>@<%= review.author.username %></b></h5>
+                  <p class="starability-result" data-rating="<%= review.rating %>"> </p>   
+                  <p class="starability-result-written"><%= review.rating %> <b>Stars</b></p>        
+                  <h5 class="card-title"><b><i class="fa-solid fa-user"></i> <%= review.author.username %></b></h5>
                   <p class="starability-result" data-rating="<%= review.rating %>"> </p>                 
                   <p class="card-text"> <b>Comment : </b><%= review.comment %> </p>
                 </div>
              <form method="POST" action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
-                <button class="btn btn-dark review-del-btn mt-3 mb-3">Delete</button>
+                <button class="btn btn-dark review-del-btn mt-3 mb-3"><i class="fa-solid fa-trash"></i><span>&nbsp;Delete</span></button>
              </form>
               </div>
         <% } %>
