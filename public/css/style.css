@@ -76,14 +76,10 @@ body{
     background-color: #F8F9fA !important;
 }
 
-
-
-.upper-part{
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100%;
-
+.nav-link:hover{
+    font-weight: 800;
+    font-size: 0.92rem !important;
+    /* transition: color 0.3s, transform 1s; */
 }
 
 .search-option2 {
@@ -297,6 +293,11 @@ textarea::-webkit-scrollbar-thumb:hover {
         font-size: 1.5rem;
     }
 }
+@media (max-width:790px){
+    .nav-link{
+        font-size: 0.8rem !important;
+    }
+}
 
 @media (max-width: 550px) {
     .search-option2 {
@@ -359,11 +360,11 @@ textarea::-webkit-scrollbar-thumb:hover {
         max-width: 100%;  
     }
     
-    .review-del-btn span , .back-btn span , .del-listing-btn span , .edit-listing-btn span , .addreview-btn span{
+    .review-del-btn span , .back-btn span , .del-listing-btn span , .edit-listing-btn span , .addreview-btn span , .login-btn span , .signup-btn span{
         display: none;
         
     }
-    .review-del-btn , .back-btn , .del-listing-btn , .edit-listing-btn , .addreview-btn{
+    .review-del-btn , .back-btn , .del-listing-btn , .edit-listing-btn , .addreview-btn , .login-btn , .signup-btn{
         width: auto;
         align-items: center;
     }

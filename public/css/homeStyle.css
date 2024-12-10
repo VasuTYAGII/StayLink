@@ -91,7 +91,6 @@ body {
     background-size:cover; 
     background-position:center; 
     animation: fadeIn 1s ease-out;
-    /* animation-direction: alternate; */
 }
 
 /* Header Section */
